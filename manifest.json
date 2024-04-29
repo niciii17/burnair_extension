@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Burnair_UX_extension",
+    "version": "1.0",
+    "description": "Make UX of burnair better",
+    "permissions": ["activeTab"],
+    "content_scripts": [
+      {
+        "matches": [
+          "https://burnair.cloud/*",
+          "https://www.burnair.cloud/*"
+        ],
+        "js": [
+          "src/jquery.min.js",
+          "src/burnair_extension.js"        ],
+        "run_at": "document_end"
+      }
+    ]
+  }
