@@ -9,7 +9,6 @@ $( '.c-popup' ).each(function () {
 
 // handle detail window slider apperance
 function onClassChange(node, callback) {
-    console.log(node)
     let lastClassString = node.classList.toString();
   
     const mutationObserver = new MutationObserver((mutationList) => {
@@ -29,10 +28,10 @@ function onClassChange(node, callback) {
     return mutationObserver;
   }
 
-const sliderHandler = $('.c-popup')[0]
-onClassChange(sliderHandler, () => {
+const detailWindow = $('.c-popup')[0]
+onClassChange(detailWindow, () => {
     const handler =  $(".resize-button-nob");
-    if (tag.classList.contains("closed")) {
+    if (detailWindow.classList.contains("closed")) {
         handler.css("display", "none")
     } else {
         handler.css("display", "block")
